@@ -4,6 +4,11 @@ use crate::learning::shape::Rect;
 use crate::learning::enumarate::{calc_area, Shape};
 use crate::learning::find_character::find_first_character;
 use crate::learning::read_file::read_file_content;
+use crate::learning::ownership::create_string;
+use crate::learning::reference::{reference, mutable_reference};
+use crate::learning::vectors::{even_filter, vectors};
+use crate::learning::hashmap::vector_to_hashmap;
+use crate::learning::iter::iteration;
 
 fn main(){
 
@@ -41,4 +46,25 @@ fn main(){
         Ok(text) => println!("File content:\n{}", text),
         Err(e) => println!("Error reading file: {}", e),
     }
+
+    // Ownership
+    create_string();
+
+    //Reference
+    reference();
+    mutable_reference();
+
+    //Vectors
+    let v = vectors();
+
+    println!("The vector is {:?}",v);
+    println!("The even vector is {:?}",even_filter(&v));
+
+    //HashMap
+    let input_vector = vec![(String::from("Dan"), 1), (String::from("Sam"),2)];
+
+    println!("The hashmap is {:#?}",vector_to_hashmap(input_vector));
+
+    // Iteration
+    iteration();
 }

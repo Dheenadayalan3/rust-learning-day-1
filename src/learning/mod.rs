@@ -2,3 +2,8 @@ pub mod shape;
 pub mod enumarate;
 pub mod find_character;
 pub mod read_file;
+pub mod ownership;
+pub mod reference;
+pub mod vectors;
+pub mod hashmap;
+pub mod iter;
