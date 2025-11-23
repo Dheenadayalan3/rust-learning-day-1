@@ -52,3 +52,44 @@ cargo run
 
 ------------------------------------------------------------------------
 
+📘 Day 2 — Rust Learning Progress
+🔹 Topics Covered Today
+1. Ownership, Moving, Borrowing
+
+Learned how Rust ensures memory safety without garbage collection
+
+Practiced:
+
+&T — shared borrowing
+
+&mut T — mutable borrowing
+
+Moving values and how ownership transfers
+
+Why returning values sometimes creates moves
+
+2. Collections
+
+Introduction to Rust's collection types
+
+Practical usage of Vec<T>
+
+Vectors
+
+Creating vectors
+
+push() to add elements
+
+Returning vectors safely
+
+Ownership when passing vectors to functions
+
+3. Iterators
+
+Understood differences between:
+
+iter() → immutable iteration (&T)
+
+iter_mut() → mutable iteration (&mut T)
+
+into_iter() → consumes the collection (T)
