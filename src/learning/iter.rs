@@ -4,7 +4,7 @@ pub fn iteration(){
 
     let mut vector1_iter = vector1.iter_mut();
 
-    while let Some(value) = vector1_iter.next(){    // .next() gives option either vector(Some) or None
+    while let Some(value) = vector1_iter.next(){    // .next() gives Option<&mut i32>
         *value = *value + 1;
     }
 
