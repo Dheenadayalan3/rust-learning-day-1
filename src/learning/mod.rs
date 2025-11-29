@@ -7,3 +7,8 @@ pub mod reference;
 pub mod vectors;
 pub mod hashmap;
 pub mod iter;
+pub mod iter_adapt;
+pub mod iter_hashmap;
+pub mod slice;
+pub mod generic;
+pub mod traits;
