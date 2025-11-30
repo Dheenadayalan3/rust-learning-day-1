@@ -12,3 +12,7 @@ pub mod iter_hashmap;
 pub mod slice;
 pub mod generic;
 pub mod traits;
+pub mod lifetime;
+pub mod lifetime_sruct;
+pub mod multi_thread;
+pub mod message_pass;

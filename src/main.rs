@@ -1,6 +1,10 @@
 mod learning;
 
 use crate::learning::generic::largest;
+use crate::learning::lifetime::longest;
+use crate::learning::lifetime_sruct::{longest_with_an_announcement, structs_lifetime};
+use crate::learning::message_pass::message_passing;
+use crate::learning::multi_thread::{multi_thread_move, multi_threading};
 use crate::learning::shape::Rect;
 use crate::learning::enumarate::{calc_area, Shape};
 use crate::learning::find_character::find_first_character;
@@ -98,4 +102,26 @@ fn main(){
 
     println!("{}", user.summarize()); // direct call
     notify(user); // this will print summarize + fix
+
+    //Lifetime
+    let _ans;
+    let str1 = String::from("gja");
+    {
+        let str2 = String::from("sjdhiwej");
+        _ans = longest(&str1, &str2);
+    }
+    println!("This is from lifetime example");
+    //println!("{}", ans);  // we can't use bescause str2 is memory is free in this point so ans referring to do nothing (dangling error in c)
+
+    //structs with lifetime
+    structs_lifetime();
+
+    println!("The longest string is {}", longest_with_an_announcement("x", "y", "ann"));
+
+    // Multi Threading
+    multi_threading();
+    multi_thread_move();
+
+    // Message passing
+    message_passing();
 }
